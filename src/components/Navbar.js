@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 const Navbar = () => {
   return (
     <header className='text-gray-600 body-font'>
@@ -21,16 +23,16 @@ const Navbar = () => {
           <span className='ml-3 text-xl'>AuthenTech</span>
         </a>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
-          <a href='#' className='mr-5 hover:text-gray-900'>
+          <NavLink to='/home' className='mr-5 hover:text-gray-900'>
             Home
-          </a>
+          </NavLink>
 
-          <a href='#' className='mr-5 hover:text-gray-900'>
+          <NavLink to='/profile' className='mr-5 hover:text-gray-900'>
             Profile
-          </a>
-          <a href='#' className='mr-5 hover:text-gray-900'>
+          </NavLink>
+          <NavLink to='/wallet' className='mr-5 hover:text-gray-900'>
             Wallet
-          </a>
+          </NavLink>
           <button className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
             Logout
             <svg
@@ -46,9 +48,9 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <a href='#' className='mr-5 hover:text-gray-900'>
+          <NavLink to='/login' className='mr-5 hover:text-gray-900'>
             Login
-          </a>
+          </NavLink>
         </nav>
       </div>
     </header>
